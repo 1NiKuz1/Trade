@@ -1,0 +1,52 @@
+﻿<Window x:Class="Trade.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trade"
+        mc:Ignorable="d"
+        Title="ProductWindow" Height="450" Width="800">
+  <Grid Margin="40,20,40,20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="40" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="titleText" Grid.Row="0" Text="Добавление продукта" FontSize="24" TextAlignment="Center" FontFamily="Comic Sans MS"/>
+    <ScrollViewer Grid.Row="1">
+      <StackPanel>
+        <TextBlock x:Name="articulTextBlock" Text="Артикул" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="articulText" Padding="10, 5" Margin="0, 0, 0, 5" FontFamily="Comic Sans MS"/>
+        
+        <TextBlock Text="Название" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="nameText" Padding="10, 5" Margin="0, 0, 0, 5" FontFamily="Comic Sans MS"/>
+        
+        <TextBlock Text="Описание" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="descriptionText" Padding="10, 5" Margin="0, 0, 0, 5" FontFamily="Comic Sans MS"/>
+        
+        <TextBlock Text="Категория" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="categoryComboBox" Width="200" HorizontalAlignment="Left"/>
+        
+        <TextBlock Text="Производитель" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="manufacturerComboBox" Width="200" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="Цена" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="costText" Padding="10, 5" Margin="0, 0, 0, 5" FontFamily="Comic Sans MS"/>
+
+        <TextBlock Text="Количество на складе" FontSize="16" Margin="0, 0, 0, 10" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="quantityText" Padding="10, 5" Margin="0, 0, 0, 20" FontFamily="Comic Sans MS"/>
+        
+        <StackPanel Orientation="Horizontal">
+          <Button x:Name="addButton" Content="Добавить" FontSize="14" Padding="40, 8" HorizontalAlignment="Left" Margin="0, 0, 20, 0"
+              Background="#498c51" Foreground="White" BorderThickness="0" FontWeight="Medium" FontFamily="Comic Sans MS" Click="AddButton_Click"/>
+          <Button x:Name="editButton" Content="Изменить" FontSize="14" Padding="40, 8" HorizontalAlignment="Left" Margin="0, 0, 20, 0"
+              Background="#498c51" Foreground="White" BorderThickness="0" FontWeight="Medium" FontFamily="Comic Sans MS" Click="EditButton_Click"/>
+          <Button x:Name="delButton" Content="Удалить" FontSize="14" Padding="40, 8" HorizontalAlignment="Left" Margin="0, 0, 20, 0"
+              Background="#498c51" Foreground="White" BorderThickness="0" FontWeight="Medium" FontFamily="Comic Sans MS" Click="DelButton_Click"/>
+          <Button x:Name="canselButton" Content="Отмена" FontSize="14" Padding="40, 8" HorizontalAlignment="Left"
+              Background="#498c51" Foreground="White" BorderThickness="0" FontWeight="Medium" FontFamily="Comic Sans MS" Click="CanselButton_Click"/>
+        </StackPanel>
+      </StackPanel>
+    </ScrollViewer>
+    
+  </Grid>
+</Window>
